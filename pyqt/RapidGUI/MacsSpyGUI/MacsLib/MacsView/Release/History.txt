@@ -1,0 +1,212 @@
+%-----------------------------------------------------------------------------
+% TODO
+%-----------------------------------------------------------------------------
+New:
+- Implement symbol -s -> .ssym
+- Implement typedef DAAS messages
+- Implement MacsDecode(). Move oven_current_temperature to Macs_Mng_Hot.c
+- Implement MAX lenght test in receive message
+- Implement open file test in general
+- Implement test for sym_size, (run time test)
+- Use malloc for buffer trace and outbox message
+- Add in SeviceOVC2000 buff_out_sp
+- Change (* void) to (*struct {void *private})
+- Rimettere 6, disabilitare solo in pot detection
+- Use error code in DirectMacs
+- Errori code in negativo (_close)
+
+
+%-----------------------------------------------------------------------------
+% MacsView v.4.03
+%-----------------------------------------------------------------------------
+File.ini:
+- New file MacsMsgWet.ini
+- Update BareTail.udm
+
+MacsMsg:
+- Enable decode first body byte if available (message length > 2)
+
+ServiceOutbox
+- BugFix: message length equal 2 not valid
+- BugFix: increase message length
+
+%-----------------------------------------------------------------------------
+% MacsView v.4.02
+%-----------------------------------------------------------------------------
+- Microsoft Visual C++
+
+%-----------------------------------------------------------------------------
+% UTIL3xx
+%-----------------------------------------------------------------------------
+ServiceHOC2010:
+- Implementation of Boost bit
+
+%-----------------------------------------------------------------------------
+% UTIL301
+%-----------------------------------------------------------------------------
+Official version
+
+%-----------------------------------------------------------------------------
+% UTIL222
+%-----------------------------------------------------------------------------
+Test Version
+Bug fix:
+- Memory access
+- Wrong decodifications of read request messages
+
+%-----------------------------------------------------------------------------
+% UTIL221
+%-----------------------------------------------------------------------------
+Bug fix:
+- Load symbol file error Cosmic Extended not managed
+- Trace list in trace.dat
+
+%-----------------------------------------------------------------------------
+% UTIL220
+%-----------------------------------------------------------------------------
+ServiceOutBox:
+- implementation of memory write
+
+General project review
+
+%-----------------------------------------------------------------------------
+% UTIL215
+%-----------------------------------------------------------------------------
+ServiceHOC2010:
+- Re-implement and configure Pot Detection V2
+
+%-----------------------------------------------------------------------------
+% UTIL214
+%-----------------------------------------------------------------------------
+ServiceHOC2010:
+- Fix Bug: no CRC in auto user selection sending
+
+
+%-----------------------------------------------------------------------------
+% UTIL213
+%-----------------------------------------------------------------------------
+ServiceHOC2010:
+- Message CRC implementation
+
+%-----------------------------------------------------------------------------
+% UTIL212
+%-----------------------------------------------------------------------------
+ServiceHOC2010:
+- Toggle HUI_DEMO
+
+%-----------------------------------------------------------------------------
+% UTIL211
+%-----------------------------------------------------------------------------
+MacsMsgHot:
+- OpCode H_PotDt 0x27
+
+%-----------------------------------------------------------------------------
+% UTIL210
+%-----------------------------------------------------------------------------
+MacsView:
+- Bug Fix: wrong lenght of message D_Memor READ_REQ
+
+MacsMsg:
+- Review guard level
+
+ServiceHOC2010:
+- Update message from specification "HobMacsCommSpec_2_6.doc"
+
+%-----------------------------------------------------------------------------
+% UTIL209
+%-----------------------------------------------------------------------------
+ServiceHOC2010:
+- Bug Fix: wrong messages lenght
+
+%-----------------------------------------------------------------------------
+% UTIL208
+%-----------------------------------------------------------------------------
+ServiceTrace:
+- [SymbolType] section inside ini file
+- Fix bug, display error message
+
+%-----------------------------------------------------------------------------
+% UTIL207
+%-----------------------------------------------------------------------------
+General:
+- Review Macs header management
+
+%-----------------------------------------------------------------------------
+% UTIL206
+%-----------------------------------------------------------------------------
+General:
+- Remove "apici"
+- Implement reload on fly MacsView.ini
+
+ServiceTrace
+- Remove NumTrace
+
+ServiceOutBox
+- First Version
+
+%-----------------------------------------------------------------------------
+% UTILS205
+%-----------------------------------------------------------------------------
+MacsMsg:
+- Err guard level to 0
+
+ServiceTrace:
+- Disable key_handle if not PlotTrace
+- Little Endian
+- LogTrace
+
+ServiceSmart:
+- Bug fix
+
+
+%-----------------------------------------------------------------------------
+% UTILS204
+%-----------------------------------------------------------------------------
+Service:
+- Definition Service_reset() function
+- Definition Service.loop() call
+
+ServiceHOC2010: (old name SimulationHUI)
+- dout.status monitor
+- Message repetition send
+- Toggle pot status valid
+
+ServiceSmart:
+- New, (to be tested)
+
+%-----------------------------------------------------------------------------
+% UTILS203
+%-----------------------------------------------------------------------------
+MacsMsg:
+- hLevCk = 0x2A
+- Set/Rslt/RReq/IRep
+- Define macs times macros
+Plot:
+- Plot data filename commands in file.plt
+ServiceTrace:
+- Fix Bug negative value if > 128
+- MAX_SYM_SIZE test
+SimulatinoHui:
+- Pot Detection message
+
+%-----------------------------------------------------------------------------
+% UTILS202
+%-----------------------------------------------------------------------------
+Test Version, (not univocal)
+
+%-----------------------------------------------------------------------------
+% UTILS201
+%-----------------------------------------------------------------------------
+MacsView:
+- SimulationHUI
+- Define Macs_Msg_Hot specific definition
+- Sym_Service -> Service
+- Common definition of UnitCode and DisctinctiveCode
+- Additional modification not listed
+
+%-----------------------------------------------------------------------------
+% UTILS200
+%-----------------------------------------------------------------------------
+No delivery information
+
+

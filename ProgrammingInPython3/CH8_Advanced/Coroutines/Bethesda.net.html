@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="referrer" content="origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link rel="stylesheet" href="https://bethesda.net/shared/styles/bethesdanet.css">
+<link rel="icon" href="https://bethesda.net/favicon.ico">
+<title>Bethesda.net</title>
+</head>
+<body>
+<app></app>
+<bn-visoralert></bn-visoralert>
+<section id="contentWrapper" class="main" role="main">
+<bn-signin></bn-signin>
+<bn-join></bn-join>
+<bn-settings></bn-settings>
+<bn-otpsent></bn-otpsent>
+<bn-recover></bn-recover>
+<bn-generic></bn-generic>
+<bn-sqa></bn-sqa>
+<bn-sqa-reset></bn-sqa-reset>
+<bn-updated-legaldocs></bn-updated-legaldocs>
+<bn-resetpassword></bn-resetpassword>
+<bn-redirect></bn-redirect>
+<bn-emailsent></bn-emailsent>
+<bn-emailreset></bn-emailreset>
+<bn-signout></bn-signout>
+</section>
+<globalfooter></globalfooter>
+<script src="https://cdn01.bethesda.net/shared/core/2/browser.min.js"></script>
+<script src="https://bethesda.net/shared/scripts/vendor.js"></script>
+<script src="https://bethesda.net/shared/tags.js"></script>
+<script src="https://bethesda.net/shared/scripts/core.js"></script>
+<script>
+window.bnConf.unGated = true
+function captchaOnload() {
+bnConf.prefixUrl = '';
+_bnConf.prefixUrl = '';
+bnPromise(_bnConf).then(function(bnAPI) {
+var state = bnAPI.core.store.getState();
+riot.mount('bn-visoralert', {
+api: bnAPI
+});
+
+riot.mount('bn-signin', {
+api: bnAPI,
+prefixUrl: "",
+oauth: {"forgotPasswordUrl": "/en/account-help-password?r=fp", "signinPostUrl": "/en/login", "createAccountUrl": "/en/join", "forgotUsernameUrl": "/en/account-help-username?r=fun"}
+});
+
+
+
+});
+};
+</script>
+<script>
+</script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=" + _bnConf.googleTagManager
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer', bnConf.googleTagManager);</script>
+<!-- End Google Tag Manager -->
+<script>
+</script>
+<script src="https://www.google.com/recaptcha/api.js?onload=captchaOnload&render=explicit" async defer></script>
+</body>
+</html>

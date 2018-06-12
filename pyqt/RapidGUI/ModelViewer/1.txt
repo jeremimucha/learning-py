@@ -1,0 +1,120 @@
+A.P. Møller|Mærsk Line|Denmark|91690|Captain Ferraby
+Adrian Mærsk|Mærsk Line|Denmark|93496|Captain G. E. Ericson
+Albert Mærsk|Mærsk Line|Denmark|93496|Captain Tallow
+Anna Mærsk|Mærsk Line|Denmark|93496|Captain Lockhart
+Arnold Mærsk|Mærsk Line|Denmark|93496|Captain Morrell
+Arthur Mærsk|Mærsk Line|Denmark|93496|
+Axel Mærsk|Mærsk Line|Denmark|93496|
+Caroline Mærsk|Mærsk Line|Denmark|91690|
+Carsten Mærsk|Mærsk Line|Denmark|91690|
+Charlotte Mærsk|Mærsk Line|Denmark|91690|
+Chastine Mærsk|Mærsk Line|Denmark|91690|
+Chicago Express|Hapag-Lloyd|Germany|93750|
+Clementine Mærsk|Mærsk Line|Denmark|91690|
+Clifford Mærsk|Mærsk Line|Denmark|91690|
+CMA CGM Carmen|E R Schiffahrt|Liberia|89800|
+CMA CGM Don Carlos|E R Schiffahrt|Liberia|89800|
+CMA CGM Don Giovanni|E R Schiffahrt|Liberia|89800|
+CMA CGM Fidelio|CMA CGM|France|99500|
+CMA CGM Hugo|NSB Niederelbe|Germany|90745|
+CMA CGM La Traviata|CMA CGM|France|91400|
+CMA CGM Medea|CMA CGM|France|95000|
+CMA CGM Nabucco|CMA CGM|France|91400|
+CMA CGM Norma|CMA CGM|Bahamas|95000|
+CMA CGM Otello|CMA CGM|France|91400|
+CMA CGM Parsifal|E R Schiffahrt|Liberia|89800|
+CMA CGM Rigoletto|CMA CGM|France|99500|
+CMA CGM Tosca|CMA CGM|France|91400|
+CMA CGM Vivaldi|CMA CGM|Bahamas|90745|
+Colombo Express|Hapag-Lloyd|Germany|93750|Main engine, 93,500 hp
+Columbine Mærsk|Mærsk Line|Denmark|91690|
+Cornelia Mærsk|Mærsk Line|Denmark|91690|
+Cornelius Mærsk|Mærsk Line|Denmark|91690|
+Cosco Beijing|Costamare Shipping|Greece|99833|
+Cosco China|E R Schiffahrt|Liberia|91649|
+Cosco Germany|E R Schiffahrt|Liberia|89800|
+Cosco Guangzho|Costamare Shipping|Greece|99833|
+Cosco Hellas|Costamare Shipping|Greece|99833|
+Cosco Napoli|E R Schiffahrt|Liberia|89800|
+Cosco Ningbo|Costamare Shipping|Greece|99833|
+Cosco Yantian|Costamare Shipping|Greece|99833|
+CSCL Africa|Seaspan Container Line|Cyprus|90645|
+CSCL America|Danaos Shipping |Cyprus|90645|
+CSCL Asia|Seaspan Container Line|Hong Kong|90645|
+CSCL Europe|Danaos Shipping|Cyprus|90645|
+CSCL Le Havre|Danaos Shipping|Cyprus|107200|
+CSCL Oceania|Seaspan Container Line|Hong Kong|90645|Captain Baker
+CSCL Pusan|Danaos Shipping|Cyprus|107200|Captain Watts
+Eleonora Mærsk|Mærsk Line|Denmark|151687|Captain Hallam
+Emma Mærsk|Mærsk Line|Denmark|151687|Wärtsilä-Sulzer RTA96-C main engine,109,000 hp
+Estelle Mærsk|Mærsk Line|Denmark|151687|Captain Wells
+Evelyn Mærsk|Mærsk Line|Denmark|151687|Captain Byrne
+Ever Champion|NSB Niederelbe|Marshall Islands|90449|Captain Phillips
+Ever Charming|NSB Niederelbe|Marshall Islands|90449|Captain Tonbridge
+Ever Chivalry|NSB Niederelbe|Marshall Islands|90449|
+Ever Conquest|NSB Niederelbe|Marshall Islands|90449|
+Georg Mærsk|Mærsk Line|Denmark|97933|
+Gerd Mærsk|Mærsk Line|Denmark|97933|
+Gjertrud Mærsk|Mærsk Line|Denmark|97933|
+Grete Mærsk|Mærsk Line|Denmark|97933|
+Gudrun Mærsk|Mærsk Line|Denmark|97933|
+Gunvor Mærsk|Mærsk Line|Denmark|97933|
+Hannover Bridge|Kawasaki Kisen Kaisha|Japan|99500|
+Houston Express|Norddeutsche Reederei|Germany|95000|Features a twisted leading edge full spade rudder. Sister of Savannah Express
+Ital Contessa|NSB Niederelbe|Marshall Islands|90449|
+Kyoto Express|Hapag-Lloyd|Germany|93750|
+Lt Cortesia|NSB Niederelbe|Marshall Islands|90449|
+MSC Beijing|Offen Claus-Peter|Panama|89954|
+MSC Bruxelles|Offen Claus-Peter|Liberia|90449|
+MSC Busan|Offen Claus-Peter|Panama|89954|
+MSC Charleston|Offen Claus-Peter|Panama|89954|
+MSC Chicago|Offen Claus-Peter|Liberia|90449|
+MSC Esthi|MSC|Liberia|99500|
+MSC Heidi|MSC|Panama|95000|
+MSC Ines|MSC|Liberia|107551|
+MSC Lucy|MSC|Panama|89954|
+MSC Madeleine|MSC|Liberia|107551|
+MSC Maeva|MSC|Panama|89954|
+MSC Pamela|MSC|Liberia|90449|Draft 15m
+MSC Rachele|NSB Niederelbe|Germany|90745|
+MSC Rania|MSC|Panama|95000|
+MSC Rita|MSC|Panama|89954|
+MSC Roma|Offen Claus-Peter|Liberia|99500|
+MSC Silvana|MSC|Panama|95000|
+MSC Susanna|MSC|Liberia|90449|
+MSC Toronto|Offen Claus-Peter|Panama|89954|
+MSC Vittoria|MSC|Panama|89954|
+Mærsk Saigon|Blue Star GmbH|Liberia|95000|
+Mærsk Santana|Blue Star GmbH|Liberia|94724|
+Mærsk Sarnia|Blue Star GmbH|Liberia|94724|
+Mærsk Seoul|Blue Star Ship Managment GmbH|Germany|95000|
+Mærsk Seville|Blue Star GmbH|Liberia|94724|
+Mærsk Sheerness|Blue Star GmbH|Liberia|94724|
+Mærsk Stralsund|Blue Star GmbH|Liberia|95000|
+Mærsk Surabaya|Offen Claus-Peter|Germany|98400|
+Mærsk Sydney|Blue Star GmbH|Liberia|94724|
+NYK Vega|Nippon Yusen Kaisha|Panama|97825|
+OOCL Asia|OOCL|Hong Kong|89097|
+OOCL Atlanta|OOCL|Hong Kong|89000|
+OOCL Europe|OOCL|Hong Kong|89097|
+OOCL Hamburg|OOCL|Marshall Islands|89097|
+OOCL Long Beach|OOCL|Marshall Islands|89097|
+OOCL Ningbo|OOCL|Marshall Islands|89097|
+OOCL Shenzhen|OOCL|Hong Kong|89097|
+OOCL Tianjin|OOCL|Marshall Islands|89097|
+OOCL Tokyo|OOCL|Hong Kong|89097|
+Pacific Link|NSB Niederelbe|Germany|90745|
+Sally Mærsk|Mærsk Line|Denmark|91690|
+Savannah Express|Norddeutsche Reederei|Germany|95000|Sister of Houston Express
+Sine Mærsk|Mærsk Line|Denmark|91690|
+Skagen Mærsk|Mærsk Line|Denmark|91690|
+Sofie Mærsk|Mærsk Line|Denmark|91690|
+Sorø Mærsk|Mærsk Line|Denmark|91690|
+Sovereing Mærsk|Mærsk Line|Denmark|91690|
+Susan Mærsk|Mærsk Line|Denmark|91690|
+Svend Mærsk|Mærsk Line|Denmark|91690|
+Svendborg Mærsk|Mærsk Line|Denmark|91690|
+Xin Los Angeles|China Shipping Container Lines (CSCL)|Hong Kong|107200|
+Xin Shanghai|China Shipping Container Lines (CSCL)|Hong Kong|107200|
+YM Unison|Yang Ming Line|Taiwan|88600|
+YM Utmost|Yang Ming Line|Taiwan|88600|

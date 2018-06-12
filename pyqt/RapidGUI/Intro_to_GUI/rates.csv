@@ -1,0 +1,67 @@
+# The daily noon exchange rates for major foreign currencies are published every business day at about 12:30
+# p.m. EST. They are obtained from market or official sources around noon and show the rates for the
+# various currencies in Canadian dollars converted from US dollars. The rates are nominal quotations -
+# neither buying nor selling rates - and are intended for statistical or analytical purposes. Rates
+# available from financial institutions will differ.
+#
+Date (<y>-<m>-<d>), ISO4217, 2016-08-24, 2016-08-25, 2016-08-26, 2016-08-29, 2016-08-30, 2016-08-31, 2016-09-01
+U.S. dollar , USD_NOON, 1.2940, 1.2937, 1.2947, 1.3019, 1.3076, 1.3124, 1.3107
+U.S. dollar (close), USD_CLOSE, 1.2930, 1.2926, 1.3000, 1.3022, 1.3096, 1.3116, Not available
+US/Canada noon 3-month forward points spread, IEXE0124, -0.05, -0.05, -0.05, -0.05, -0.06, -0.06, -0.05
+US/Canada noon 6-month forward points spread, IEXE0125, -0.11, -0.11, -0.11, -0.12, -0.13, -0.14, -0.13
+Argentine peso, ARS_NOON, 0.08695, 0.08685, 0.08667, 0.08625, 0.08648, 0.08812, 0.08817
+Australian dollar, AUD_NOON, 0.9840, 0.9846, 0.9859, 0.9861, 0.9827, 0.9869, 0.9883
+Bahamian dollar, BSD_NOON, 1.2940, 1.2937, 1.2947, 1.3019, 1.3076, 1.3124, 1.3107
+Brazilian real, BRL_NOON, 0.3998, 0.4004, 0.4035, 0.4012, 0.4019, 0.4042, 0.4037
+CFA franc (African Financial Community), XAF_NOON, 0.002221, 0.002223, 0.002218, 0.002219, 0.002223, 0.002230, 0.002237
+CFP franc (Pacific Financial Community), XPF_NOON, 0.01221, 0.01222, 0.01219, 0.01220, 0.01222, 0.01226, 0.01230
+Chilean peso, CLP_NOON, 0.001930, 0.001947, 0.001947, 0.001942, 0.001939, 0.001932, 0.001928
+Chinese renminbi, CNY_NOON, 0.1943, 0.1943, 0.1941, 0.1950, 0.1957, 0.1965, 0.1965
+Colombian peso, COP_NOON, 0.000439, 0.000444, 0.000448, 0.000445, 0.000446, 0.000444, 0.000438
+Croatian kuna, HRK_NOON, 0.1943, 0.1947, 0.1943, 0.1943, 0.1947, 0.1956, 0.1961
+Czech Republic koruna, CZK_NOON, 0.05388, 0.05397, 0.05381, 0.05384, 0.05395, 0.05413, 0.05430
+Danish krone, DKK_NOON, 0.1957, 0.1959, 0.1954, 0.1955, 0.1959, 0.1966, 0.1972
+East Caribbean dollar, XCD_NOON, 0.4810, 0.4809, 0.4813, 0.4840, 0.4861, 0.4879, 0.4872
+European Euro, EUR_NOON, 1.4566, 1.4585, 1.4550, 1.4557, 1.4580, 1.4628, 1.4672
+Fiji dollar, FJD_NOON, 0.6266, 0.6265, 0.6270, 0.6269, 0.6388, 0.6300, 0.6289
+Ghanaian cedi, GHS_NOON, 0.3265, 0.3265, 0.3255, 0.3295, 0.3305, 0.3309, 0.3306
+Guatemalan quetzal, GTQ_NOON, 0.1662, 0.1662, 0.1663, 0.1673, 0.1680, 0.1686, 0.1684
+Honduran lempira, HNL_NOON, 0.05665, 0.05667, 0.05679, 0.05715, 0.05720, 0.05744, 0.05741
+Hong Kong dollar, HKD_NOON, 0.166873, 0.166816, 0.166928, 0.167865, 0.168549, 0.169193, 0.168970
+Hungarian forint, HUF_NOON, 0.004703, 0.004717, 0.004711, 0.004718, 0.004706, 0.004725, 0.004735
+Icelandic krona, ISK_NOON, 0.01105, 0.01107, 0.01106, 0.01110, 0.01116, 0.01125, 0.01132
+Indian rupee, INR_NOON, 0.01927, 0.01930, 0.01933, 0.01938, 0.01947, 0.01960, 0.01960
+Indonesian rupiah, IDR_NOON, 0.000098, 0.000098, 0.000098, 0.000098, 0.000098, 0.000099, 0.000099
+Israeli new shekel, ILS_NOON, 0.3436, 0.3442, 0.3433, 0.3436, 0.3450, 0.3470, 0.3479
+Jamaican dollar, JMD_NOON, 0.01021, 0.01020, 0.01019, 0.01023, 0.01028, 0.01031, 0.01030
+Japanese yen, JPY_NOON, 0.01287, 0.01286, 0.01279, 0.01275, 0.01270, 0.01269, 0.01270
+Malaysian ringgit, MYR_NOON, 0.3204, 0.3222, 0.3223, 0.3218, 0.3228, 0.3240, 0.3215
+Mexican peso, MXN_NOON, 0.06995, 0.07015, 0.07077, 0.07013, 0.06960, 0.06962, 0.06962
+Moroccan dirham, MAD_NOON, 0.1331, 0.1335, 0.1333, 0.1336, 0.1340, 0.1344, 0.1346
+Myanmar (Burma) kyat, MMK_NOON, 0.00107, 0.00108, 0.00107, 0.00108, 0.00108, 0.00108, 0.00108
+Neth. Antilles guilder, ANG_NOON, 0.7270, 0.7268, 0.7274, 0.7314, 0.7224, 0.7373, 0.7363
+New Zealand dollar, NZD_NOON, 0.9453, 0.9439, 0.9453, 0.9441, 0.9441, 0.9523, 0.9543
+Norwegian krone, NOK_NOON, 0.1573, 0.1573, 0.1572, 0.1571, 0.1568, 0.1573, 0.1574
+Pakistan rupee, PKR_NOON, 0.01235, 0.01234, 0.01235, 0.01243, 0.01248, 0.01253, 0.01255
+Panamanian balboa, PAB_NOON, 1.2940, 1.2937, 1.2947, 1.3019, 1.3076, 1.3124, 1.3107
+Peruvian new sol, PEN_NOON, 0.3860, 0.3862, 0.3874, 0.3863, 0.3871, 0.3862, 0.3854
+Philippine peso, PHP_NOON, 0.02782, 0.02791, 0.02797, 0.02807, 0.02811, 0.02813, 0.02806
+Polish zloty, PLN_NOON, 0.3378, 0.3366, 0.3370, 0.3351, 0.3344, 0.3351, 0.3359
+Romanian new leu, RON_NOON, 0.3267, 0.3275, 0.3265, 0.3268, 0.3271, 0.3286, 0.3295
+Russian ruble, RUB_NOON, 0.01985, 0.01999, 0.02004, 0.02001, 0.02004, 0.02009, 0.01986
+Serbian dinar, RSD_NOON, 0.01180, 0.01180, 0.01186, 0.01181, 0.01185, 0.01188, 0.01191
+Singapore dollar, SGD_NOON, 0.9547, 0.9555, 0.9555, 0.9572, 0.9587, 0.9629, 0.9643
+South African rand, ZAR_NOON, 0.09112, 0.09085, 0.09161, 0.09044, 0.09021, 0.08925, 0.08919
+South Korean won, KRW_NOON, 0.001153, 0.001159, 0.001166, 0.001160, 0.001168, 0.001175, 0.001172
+Sri Lanka rupee, LKR_NOON, 0.008887, 0.008898, 0.008898, 0.008929, 0.008994, 0.009021, 0.009008
+Swedish krona, SEK_NOON, 0.1539, 0.1538, 0.1533, 0.1536, 0.1531, 0.1531, 0.1533
+Swiss franc, CHF_NOON, 1.3377, 1.3357, 1.3321, 1.3308, 1.3312, 1.3348, 1.3385
+Taiwanese new dollar, TWD_NOON, 0.04070, 0.04083, 0.04091, 0.04103, 0.04115, 0.04131, 0.04131
+Thai baht, THB_NOON, 0.03733, 0.03743, 0.03739, 0.03766, 0.03779, 0.03789, 0.03789
+Trinidad and Tobago dollar, TTD_NOON, 0.1933, 0.1932, 0.1932, 0.1945, 0.1950, 0.1957, 0.1958
+Tunisian dinar, TND_NOON, 0.5887, 0.5889, 0.5873, 0.5893, 0.5918, 0.5939, 0.5941
+Turkish lira, TRY_NOON, 0.4377, 0.4403, 0.4402, 0.4406, 0.4413, 0.4435, 0.4417
+U.A.E. dirham, AED_NOON, 0.3523, 0.3522, 0.3525, 0.3544, 0.3560, 0.3573, 0.3568
+U.K. pound sterling, GBP_NOON, 1.7124, 1.7046, 1.7047, 1.7039, 1.7108, 1.7228, 1.7396
+Venezuelan bolivar fuerte, VEF_NOON, 0.1294, 0.1294, 0.1295, 0.1302, 0.1308, 0.1312, 0.1311
+Vietnamese dong, VND_NOON, 0.000058, 0.000058, 0.000058, 0.000058, 0.000059, 0.000059, 0.000059

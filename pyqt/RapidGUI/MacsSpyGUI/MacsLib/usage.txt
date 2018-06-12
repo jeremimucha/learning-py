@@ -1,0 +1,42 @@
+MacsSpy - Does the actual listening and timestamps the receved data. It will output the data to STDOUT and to a file called MacsSpy.log
+
+Usage: MacsSpy <COM port>
+Example 1: MacsSpy COM3
+Example 2: MacsSpy \\.\COM12
+Note: The format used in Example 1 only works for com ports 1 to 9. The format used in example 2 should work for all com ports
+
+MacsSplit - Splits the raw data provided by MacsSpy input MACS messages. Reads from STDIN outputs to STDOUT.
+
+Example: MacsSplit < MacsSpy.log > MacsSplit.log
+
+MacsRead - Appends a human readable text sting to the output from MacsSplit. Reads from STDIN outputs to STDOUT.
+
+Example: MacsRead < MacsSplit.log > MacsRead.log
+
+
+
+EXAMPLES:
+  MacsSpy COM5 | MacsSplit | MAcsRead
+  MacsSpy COM5 | MacsSplit | MAcsReadGMB | Timeconvert  
+  type MacsSpy.log | MacsSplit | MAcsReadGMB | Timeconvert  >  macsspy.txt
+ 
+
+
+DWStatus | DWDummy xxx
+
+DWStatus | DWDummy xxx | MAcsReadGMB 
+
+DWStatus | DWSim COM6  | MAcsReadGMB 
+
+
+
+ **** MACS PLAY *** 
+1. Log  with   MacsSpy COM5 | MacsSplit | MAcsReadGMB | Timeconvert > Macsspy.log.txt 
+2. Run GREP or someting to filer out lines that should not be played (e.g. acks)
+3. run MacsPlay < Macsspy.log.txt | dwdummy com5  to play recording to com port.
+
+ **** DWUPLOAD ****
+
+dwupload.exe <comport> <uicfile.s19>
+
+
