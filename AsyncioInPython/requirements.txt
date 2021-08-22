@@ -1,1 +1,8 @@
 attr
+janus
+aiohttp
+aiohttp_sse
+bs4
+lxml
+zmq
+psutil

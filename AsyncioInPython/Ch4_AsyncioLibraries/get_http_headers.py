@@ -11,7 +11,7 @@ import sys
 async def print_http_headers(url):
     url = urllib.parse.urlsplit(url)
     port, ssl = (443, True) if url.scheme == 'https' else (80, False)
-    reader, writer = await asyncio.open_connection(url.hostname, port, ssl)
+    reader, writer = await asyncio.open_connection(url.hostname, port, ssl=ssl)
 
     query = (
         f"HEAD {url.path or '/'} HTTP/1.0\r\n"
