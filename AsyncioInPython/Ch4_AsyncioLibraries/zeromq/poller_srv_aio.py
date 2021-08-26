@@ -3,7 +3,7 @@
 # Program demonstratic asyncio-based poller service
 import asyncio
 import zmq
-import itertools, time
+import itertools
 from zmq.asyncio import Context
 from contextlib import suppress
 
@@ -17,7 +17,6 @@ async def do_pusher():
         for i in itertools.count():
             await asyncio.sleep(1)
             await pusher.send_json(i)
-            # print(f"PUSH sent {i}")
     pusher.close()
 
 
@@ -28,7 +27,6 @@ async def do_publisher():
         for i in itertools.count():
             await asyncio.sleep(1)
             await publisher.send_json(i)
-            # print(f"PUB sent {i}")
     publisher.close()
 
 

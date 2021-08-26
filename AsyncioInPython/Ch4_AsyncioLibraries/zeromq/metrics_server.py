@@ -19,8 +19,10 @@ connections = WeakSet() # keeps track of all the connected web clients
 # This coro recieves instrumented data from every service.
 async def collector():
     sock = ctx.socket(zmq.SUB)
-    # empty topic name == accep all messages on this port
+    # empty topic name -> accept all messages on this port
     sock.setsockopt_string(zmq.SUBSCRIBE, '')
+    # Note that the server here is the receiving end of the connection
+    # so we bind even though we're exposing a SUB socket.
     sock.bind('tcp://*:5555')
     await sock.recv()   # necessary? discard initial empty message? see poller_aio.py
     with suppress(asyncio.CancelledError):

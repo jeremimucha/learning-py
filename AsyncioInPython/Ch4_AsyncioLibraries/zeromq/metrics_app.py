@@ -18,6 +18,7 @@ from datetime import (datetime as dt,
                     )
 from contextlib import suppress
 
+LEAK_LIMIT = 100*1024*1024 # 100 MB
 
 ctx = zmq.asyncio.Context()
 
@@ -55,6 +56,8 @@ async def main(args):
             await asyncio.sleep(uniform(0, 1))
             # fake a memory leak
             leak += [0] * args.leak
+            if leak > LEAK_LIMIT:
+                leak.clear()
 
 
 if __name__ == '__main__':

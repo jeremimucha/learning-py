@@ -1,7 +1,8 @@
 attr
-janus
 aiohttp
 aiohttp_sse
+asyncpg
+janus
 bs4
 lxml
 zmq
