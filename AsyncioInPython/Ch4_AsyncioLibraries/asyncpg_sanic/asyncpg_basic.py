@@ -5,7 +5,7 @@
 import asyncio
 import asyncpg
 import datetime
-from asyncpg_util import Database
+from util import Database
 
 
 async def main():
