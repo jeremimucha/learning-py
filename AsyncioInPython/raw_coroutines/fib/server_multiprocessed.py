@@ -3,7 +3,6 @@
 # server.py - simple 'microservice' serving results of the fibonacci sequence
 from socket import *
 from fib import fib
-import threading
 from threading import Thread
 from concurrent.futures import ProcessPoolExecutor as Pool
 
