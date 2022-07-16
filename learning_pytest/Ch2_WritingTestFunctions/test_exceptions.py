@@ -1,0 +1,24 @@
+import pytest
+import cards
+
+
+# This call raises and exception, If we don't handle it in any way, The test will fail.
+@pytest.mark.skip()
+def test_no_path_fail():
+    cards.CardsDB()
+
+# We can assert that a given call raises an exception
+def test_no_path_raises():
+    with pytest.raises(TypeError):
+        cards.CardsDB()
+
+def test_raises_with_info():
+    match_regex = "missing 1 .* positional argument"
+    with pytest.raises(TypeError, match=match_regex):
+        cards.CardsDB()
+
+def test_raises_with_info_alt():
+    with pytest.raises(TypeError) as exec_info:
+        cards.CardsDB()
+    expected = "missing 1 required positional argument"
+    assert expected in str(exec_info.value)
