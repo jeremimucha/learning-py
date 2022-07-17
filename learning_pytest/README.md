@@ -24,3 +24,24 @@ pytest allows for running a subset of tests in several ways:
 |All tests in a module           |  pytest path/test_module.py                         |
 |All tests in a directory        |  pytest path                                        |
 |Tests matching a name pattern   |  pytest -k pattern                                  |
+
+
+## Useful flags
+
+* `-s/--capture=no`  - doesn't capture stdout/stderr
+* `-v/-vv`  - different levels of verbosity
+* `-r` - report reasons for different test results (e.g. skipping a test)
+  The charater(s) that follow the `-r` flag specify which events should
+  be reported:
+  - `f` - failed
+  - `E` - Errors
+  - `a` - all, except for passed
+
+## Running markers
+
+Run tests based on markers:
+
+- run only tests marked `exception`
+  `pytest -v -m exception`
+- run only  tests marked `smoke`
+  `pytest -v -m smoke`

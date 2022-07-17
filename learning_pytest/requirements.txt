@@ -1,1 +1,5 @@
 pytest
+packaging
+Faker
+coverage
+pytest-cov
