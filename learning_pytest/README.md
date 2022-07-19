@@ -36,6 +36,7 @@ pytest allows for running a subset of tests in several ways:
   - `f` - failed
   - `E` - Errors
   - `a` - all, except for passed
+* `--setup-show` - shows setup of fixtures
 
 ## Running markers
 

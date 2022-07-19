@@ -16,6 +16,8 @@ if __name__ == "__main__":
 
 
 # test code, requires pytest
+# run these tests by simply pointing pytest to this file:
+# `pytest single_file.py`
 
 def test_foo():
     assert foo() == "foo"
