@@ -3,3 +3,4 @@ packaging
 Faker
 coverage
 pytest-cov
+tox
