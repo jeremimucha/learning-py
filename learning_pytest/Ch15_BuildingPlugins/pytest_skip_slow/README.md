@@ -49,3 +49,21 @@ In this case notable hooks are:
 * dependencies lists dependencies. Because pytest plugins require pytest, we list pytest.
 * requires-python is optional. However, I only intend to test against Python versions 3.7 and above.
 * section `[project.optional-dependencies]`, `test = ["tox"]` is optional.
+
+## Testing pytest plugins
+
+To test a pytest plugin we need to test how the plugin affects pytest itself, this is tricky
+since we're testing the test framework that we're using for testing.
+
+`pytest` itself ships with a `pytester` plugin that helps with the process.
+`pytester` creates a temporary directory for each test that uses the `pytester` fixture.
+This directory can be populated with fuctions provided by pytester:
+* makefile() creates a file of any kind.
+* makepyfile() creates a python file. This is commonly used to create test files.
+* makeconftest() creates conftest.py.
+* makeini() creates a tox.ini.
+* makepyprojecttoml() creates pyproject.toml.
+* maketxtfile() … you get the picture.
+* mkdir() and mkpydir() create test subdirectories with or without __init__.py.
+* copy_example() copies files from the project’s directory to the temporary
+directory. This is my favorite and what we’ll be using for testing our plugin.
