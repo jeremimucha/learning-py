@@ -1,0 +1,7 @@
+click
+fastapi
+h11
+pydantic
+starlette
+typing-extensions
+uvicorn
