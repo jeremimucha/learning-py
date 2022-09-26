@@ -32,12 +32,12 @@ async def get_flag(client: httpx.AsyncClient,  # <1>
 # tag::FLAGS3_ASYNCIO_GET_COUNTRY[]
 async def get_country(client: httpx.AsyncClient,
                       base_url: str,
-                      cc: str) -> str:    # <1>
+                      cc: str) -> str:  # This coroutine returns a string with country name
     url = f'{base_url}/{cc}/metadata.json'.lower()
     resp = await client.get(url, timeout=3.1, follow_redirects=True)
     resp.raise_for_status()
-    metadata = resp.json()  # <2>
-    return metadata['country']  # <3>
+    metadata = resp.json()  # metadata will get a dict built from the JSON contents of the response
+    return metadata['country']  # return the country name
 # end::FLAGS3_ASYNCIO_GET_COUNTRY[]
 
 # tag::FLAGS3_ASYNCIO_DOWNLOAD_ONE[]
@@ -47,9 +47,13 @@ async def download_one(client: httpx.AsyncClient,
                        semaphore: asyncio.Semaphore,
                        verbose: bool) -> DownloadStatus:
     try:
-        async with semaphore:  # <1>
+        # Hold the semaphore to await for `get_flag`
+        async with semaphore:
             image = await get_flag(client, base_url, cc)
-        async with semaphore:  # <2>
+        # and again for `get_country`
+        # Note that we're releasing the semaphore in between the await ... calls,
+        # this is to avoid blocking other coroutines too long.
+        async with semaphore:
             country = await get_country(client, base_url, cc)
     except httpx.HTTPStatusError as exc:
         res = exc.response
@@ -59,7 +63,8 @@ async def download_one(client: httpx.AsyncClient,
         else:
             raise
     else:
-        filename = country.replace(' ', '_')  # <3>
+        # Use the country name to create a filename.
+        filename = country.replace(' ', '_')
         await asyncio.to_thread(save_flag, image, f'{filename}.gif')
         status = DownloadStatus.OK
         msg = 'OK'

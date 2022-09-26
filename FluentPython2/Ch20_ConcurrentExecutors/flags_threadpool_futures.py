@@ -34,7 +34,7 @@ def download_many(cc_list: list[str]) -> int:
         for count, future in enumerate(futures.as_completed(todo), 1):
             res: str = future.result()
             print(f'{future} result: {res!r}')
-    
+
     return count
 
     # The above is equivalent to the implementation from `flags_threadpool`,
