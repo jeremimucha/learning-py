@@ -1,0 +1,29 @@
+[project]
+name = "schemas"
+authors = [{name = "Jeremi Mucha", email = "jam.webjunk@gmail.com"}]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+requires-python=">=3.9"
+dynamic = ["version", "description"]
+
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "sqlalchemy",
+    "databases",
+    "asyncpg",
+    "psycopg2",
+    "psycopg2-binary",
+    "alembic",
+    "python-decouple",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
