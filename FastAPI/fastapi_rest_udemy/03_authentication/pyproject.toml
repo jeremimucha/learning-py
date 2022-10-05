@@ -24,6 +24,9 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+linters = [
+    "black",
+]
 test = [
     "pytest",
 ]

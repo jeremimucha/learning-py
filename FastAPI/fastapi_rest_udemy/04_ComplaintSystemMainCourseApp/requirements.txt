@@ -7,7 +7,6 @@ psycopg2
 psycopg2-binary
 alembic
 python-decouple
-asyncpg
 email-validator
 passlib[bcrypt]
 black

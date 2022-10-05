@@ -6,24 +6,20 @@ from starlette.requests import Request
 import enum
 import sqlalchemy
 
-from pydantic import (
-    BaseModel,
-    validator
-)
-from fastapi import (
-    FastAPI,
-    HTTPException,
-    Depends
-)
+from pydantic import BaseModel, validator
+from fastapi import FastAPI, HTTPException, Depends
 from fastapi.security import (
     HTTPBearer,
     HTTPAuthorizationCredentials,
 )
 from decouple import config
+
 # Helper for hashing passwords
 from passlib.context import CryptContext
+
 # email validation
 import email_validator
+
 # authentication using JWT/oauth2
 import jwt
 
@@ -49,7 +45,12 @@ users = sqlalchemy.Table(
     sqlalchemy.Column("password", sqlalchemy.String(255)),
     sqlalchemy.Column("full_name", sqlalchemy.String(200)),
     sqlalchemy.Column("phone", sqlalchemy.String(13)),
-    sqlalchemy.Column("created_at", sqlalchemy.DateTime, nullable=False, server_default=sqlalchemy.func.now()),
+    sqlalchemy.Column(
+        "created_at",
+        sqlalchemy.DateTime,
+        nullable=False,
+        server_default=sqlalchemy.func.now(),
+    ),
     sqlalchemy.Column(
         "last_modified_at",
         sqlalchemy.DateTime,
@@ -57,7 +58,12 @@ users = sqlalchemy.Table(
         server_default=sqlalchemy.func.now(),
         onupdate=sqlalchemy.func.now(),
     ),
-    sqlalchemy.Column("role", sqlalchemy.Enum(UserRole), nullable=False, server_default=UserRole.user.name)
+    sqlalchemy.Column(
+        "role",
+        sqlalchemy.Enum(UserRole),
+        nullable=False,
+        server_default=UserRole.user.name,
+    ),
 )
 
 
@@ -76,6 +82,7 @@ class SizeEnum(enum.Enum):
     xl = "xl"
     xxl = "xxl"
 
+
 clothes = sqlalchemy.Table(
     "clothes",
     metadata,
@@ -84,7 +91,12 @@ clothes = sqlalchemy.Table(
     sqlalchemy.Column("color", sqlalchemy.Enum(ColorEnum), nullable=False),
     sqlalchemy.Column("size", sqlalchemy.Enum(SizeEnum), nullable=False),
     sqlalchemy.Column("photo_url", sqlalchemy.String(255)),
-    sqlalchemy.Column("created_at", sqlalchemy.DateTime, nullable=False, server_default=sqlalchemy.func.now()),
+    sqlalchemy.Column(
+        "created_at",
+        sqlalchemy.DateTime,
+        nullable=False,
+        server_default=sqlalchemy.func.now(),
+    ),
     sqlalchemy.Column(
         "last_modified_at",
         sqlalchemy.DateTime,
@@ -103,7 +115,7 @@ class EmailField(str):
     @classmethod
     def __get_validators__(cls):
         yield cls.validate_email
-    
+
     # validation logic is encapsulated in a classmethod.
     @classmethod
     def validate_email(cls, v) -> str:
@@ -147,6 +159,7 @@ class UserBase(BaseModel):
         except ValueError:
             raise ValueError("Please provide first and last name")
 
+
 # Convention:
 # - request schemas (models) should have an "In" suffix,
 # - response schemas (models) should have an "Out" suffix,
@@ -177,11 +190,12 @@ def create_access_token(user: Record):
     try:
         # Define a payload to decode - containing user_id and expiration date.
         # Just for demonstration - use relatively short expiration time.
-        payload = {"sub": user['id'], "exp": datetime.utcnow() + timedelta(minutes=5)}
+        payload = {"sub": user["id"], "exp": datetime.utcnow() + timedelta(minutes=5)}
         return jwt.encode(payload, config("JWT_SECRET"), algorithm="HS256")
     except Exception as ex:
         # Catch the exception just to log an re-raise it
         raise
+
 
 # Extend the HTTPBearer class with the custom authentication logic.
 # This can be used to add JWT authentication/authorization.
@@ -198,7 +212,9 @@ class CustomHTTPBearer(HTTPBearer):
         try:
             # Next we decode the payload we received, use the same secret and algorithm as before.
             # Note that here we're specifying a list of algorithms, not just one that we used.
-            payload = jwt.decode(res.credentials, config("JWT_SECRET"), algorithms=["HS256"])
+            payload = jwt.decode(
+                res.credentials, config("JWT_SECRET"), algorithms=["HS256"]
+            )
             # structure of the payload is the same, as we defined in the `create_access_token` function.
             sub = payload["sub"]
             user = await database.fetch_one(users.select().where(users.c.id == sub))
@@ -212,12 +228,13 @@ class CustomHTTPBearer(HTTPBearer):
         except jwt.InvalidTokenError:
             raise HTTPException(401, "Invalid token")
 
+
 oauth2_scheme = CustomHTTPBearer()
 
 
 def is_admin(request: Request) -> bool:
     user = request.state.user
-    if not user or user['role'] not in (UserRole.admin, UserRole.super_admin):
+    if not user or user["role"] not in (UserRole.admin, UserRole.super_admin):
         raise HTTPException(403, "You do not have permissions to access this resource.")
 
 
@@ -251,6 +268,7 @@ class ClothesBase(BaseModel):
 class ClothesIn(ClothesBase):
     pass
 
+
 class ClothesOut(ClothesBase):
     id: int
     created_at: datetime
@@ -262,8 +280,11 @@ class ClothesOut(ClothesBase):
 @app.post(
     "/clothes/",
     response_model=ClothesOut,
-    dependencies=[Depends(oauth2_scheme), Depends(is_admin)],   # <- `is_admin` is specified as a dependency.
-    status_code=201,    # status code indicating a valid response
+    dependencies=[
+        Depends(oauth2_scheme),
+        Depends(is_admin),
+    ],  # <- `is_admin` is specified as a dependency.
+    status_code=201,  # status code indicating a valid response
 )
 async def create_clothes(clothes_data: ClothesIn):
     id_ = await database.execute(clothes.insert().values(**clothes_data.dict()))
@@ -279,7 +300,7 @@ async def create_user(user: UserSignIn):
     user_dict = user.dict()
     # Just a hack to be able to create an admin user.
     if user.full_name == "IAm Admin":
-        user_dict['role'] = UserRole.admin
+        user_dict["role"] = UserRole.admin
     q = users.insert().values(**user_dict)
     id_ = await database.execute(q)
     created_user = await database.fetch_one(users.select().where(users.c.id == id_))
