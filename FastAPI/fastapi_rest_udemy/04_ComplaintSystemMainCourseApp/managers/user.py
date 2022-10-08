@@ -1,6 +1,8 @@
-from http.client import HTTPException
 from passlib.context import CryptContext
 from asyncpg import UniqueViolationError
+from fastapi import (
+    HTTPException,
+)
 
 from db import database
 from models import user
@@ -24,4 +26,15 @@ class UserManager:
         user_do = await database.fetch_one(user.select().where(user.c.id == id_))
         # TODO: This seems bad, shouldn't we just return user_do,
         # and let the caller decide how to further process this data?
+        return AuthManager.encode_token(user_do)
+
+    @staticmethod
+    async def login(user_data: dict):
+        # do == database object
+        user_email = user_data['email']
+        user_do = await database.fetch_one(user.select().where(user.c.email == user_email))
+        if not user_do:
+            raise HTTPException(400, "Wrong email or password")  # do not expose that this email does not exist.
+        elif not pwd_context.verify(user_data["password"], user_do["password"]):  
+            raise HTTPException(400, "Wrong email or password")  # do not expose that this email does not exist.
         return AuthManager.encode_token(user_do)

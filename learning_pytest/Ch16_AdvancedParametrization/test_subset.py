@@ -18,3 +18,7 @@ def user(request):
 
 def test_everyone(user):
     print(f"Test access rights for {user}")
+
+@pytest.mark.parametrize("user", ["admin"], indirect=["user"])
+def test_subset(user):
+    print(f"Test access rights for {user}")

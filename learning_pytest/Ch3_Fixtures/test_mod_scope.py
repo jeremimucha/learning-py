@@ -9,7 +9,17 @@ import cards
 # new test-case, to avoid the initialization cost.
 # This can be achieved by changing the fixture scope,
 # so that the fixture is initialized e.g. once per
-# module, or class.
+# module, or class, etc.
+#
+# Available scopes:
+# - function [default] - run once per test function
+# - class
+# - module
+# - package (test directory)
+# - session
+#
+# The `package` and `session` scopes can only be used
+# if a fixture is defined in `conftest.py`
 
 
 # Fixture initialized once per module:

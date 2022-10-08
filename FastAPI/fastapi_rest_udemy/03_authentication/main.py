@@ -190,7 +190,7 @@ def create_access_token(user: Record):
     try:
         # Define a payload to decode - containing user_id and expiration date.
         # Just for demonstration - use relatively short expiration time.
-        payload = {"sub": user["id"], "exp": datetime.utcnow() + timedelta(minutes=5)}
+        payload = {"sub": user["id"], "exp": datetime.utcnow() + timedelta(minutes=120)}
         return jwt.encode(payload, config("JWT_SECRET"), algorithm="HS256")
     except Exception as ex:
         # Catch the exception just to log an re-raise it

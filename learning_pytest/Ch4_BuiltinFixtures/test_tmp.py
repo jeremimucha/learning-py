@@ -1,6 +1,9 @@
 import pytest
 
 
+# pytest exposes a set of built-in fixtures
+
+
 def test_tmp_path(tmp_path):
     file = tmp_path / "file.txt"
     file.write_text("Hello")

@@ -25,4 +25,3 @@ setuptools.setup(
     python_requires='>=3.9'
 )
 
-# Run `python setup.py check` to verify that the setup script is correct.

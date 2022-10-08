@@ -29,3 +29,6 @@
 
   - install twine: `python -m pip install twine`
   - upload the package: `python -m twine upload --repository <...> <package-dir>/*`
+  - It is also possible to deploy a local pypi server:
+    https://github.com/pypiserver/pypiserver
+    

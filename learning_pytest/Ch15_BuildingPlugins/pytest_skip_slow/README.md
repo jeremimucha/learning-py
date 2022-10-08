@@ -66,4 +66,5 @@ This directory can be populated with fuctions provided by pytester:
 * maketxtfile() … you get the picture.
 * mkdir() and mkpydir() create test subdirectories with or without __init__.py.
 * copy_example() copies files from the project’s directory to the temporary
-directory. This is my favorite and what we’ll be using for testing our plugin.
+  directory. This is my favorite and what we’ll be using for testing our plugin.
+* runpytest() - runs pytest and returns `RunResult`object.
