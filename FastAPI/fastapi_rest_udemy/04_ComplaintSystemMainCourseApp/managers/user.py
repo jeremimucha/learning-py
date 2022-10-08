@@ -5,7 +5,10 @@ from fastapi import (
 )
 
 from db import database
-from models import user
+from models import (
+    user,
+    RoleType
+)
 from managers.auth import AuthManager
 
 
@@ -38,3 +41,15 @@ class UserManager:
         elif not pwd_context.verify(user_data["password"], user_do["password"]):  
             raise HTTPException(400, "Wrong email or password")  # do not expose that this email does not exist.
         return AuthManager.encode_token(user_do)
+
+    @staticmethod
+    async def get_all_users():
+        return await database.fetch_all(user.select())
+
+    @staticmethod
+    async def get_user_by_email(email: str):
+        return await database.fetch_all(user.select().where(user.c.email == email))
+
+    @staticmethod
+    async def change_role(role: RoleType, user_id: int):
+        await database.execute(user.update().where(user.c.id == user_id).values(role=role))

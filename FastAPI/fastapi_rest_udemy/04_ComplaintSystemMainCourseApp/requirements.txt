@@ -10,3 +10,4 @@ python-decouple
 email-validator
 passlib[bcrypt]
 black
+asyncclick
