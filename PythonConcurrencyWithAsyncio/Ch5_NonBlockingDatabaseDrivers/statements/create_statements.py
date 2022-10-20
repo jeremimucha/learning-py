@@ -63,6 +63,6 @@ INSERT INTO product_size VALUES(3, 'Large')
 """
 
 if __name__ == '__main__':
-    # Issue on Windows - need to use the SelectoEventLoopPolicy to avoid `RuntimeError: Event loop is closed`
+    # Issue on Windows - need to use the SelectEventLoopPolicy to avoid `RuntimeError: Event loop is closed`
     if os.name == 'nt':  # Windows
          asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
