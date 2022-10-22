@@ -13,3 +13,4 @@ psycopg2==2.9.4
 requests==2.28.1
 starlette==0.20.4
 uvicorn==0.18.3
+websockets==10.3
