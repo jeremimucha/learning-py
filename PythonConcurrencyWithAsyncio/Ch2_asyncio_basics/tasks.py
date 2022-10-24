@@ -4,8 +4,9 @@ from pathlib import Path
 import sys
 from unittest import result
 _SCRIPT = Path(__file__).parent.resolve()
-while _ROOT := _SCRIPT.parent:
-    if _ROOT.name == 'PythonConcurrencyWithAsyncio': break
+_ROOT = _SCRIPT.parent
+while _ROOT.name != 'PythonConcurrencyWithAsyncio':
+    _ROOT = _ROOT.parent
 sys.path.append(str(_ROOT))
 
 import asyncio
